@@ -1,0 +1,130 @@
+/* Reset styles */
+body, h1, p, span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Container */
+.exhibition-container {
+  padding: 40px 20px;
+}
+
+/* Card */
+.exhibition-card {
+  background: #3ac082;
+  padding: 30px;               /* Reduced padding */
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  max-width: 600px;           /* Medium width */
+  width: 100%;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Title */
+.exhibition-title {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #3498db;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* Description */
+.exhibition-description {
+  font-size: 18px;
+  color: #854f4f;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Grid of details */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Individual detail */
+.detail-item {
+  background: linear-gradient(135deg, #ecf0f1, #d0d3d4);
+  padding: 16px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(173, 109, 109, 0.1);
+}
+
+/* Label */
+.label {
+  font-size: 14px;
+  color: #341944;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Value */
+.value {
+  font-size: 17px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Status badge */
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.status-badge.upcoming {
+  background-color: #27ae60;
+}
+
+.status-badge.ongoing {
+  background-color: #f39c12;
+}
+
+.status-badge.ended {
+  background-color: #000000;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .exhibition-card {
+    padding: 20px;
+  }
+  .exhibition-title {
+    font-size: 26px;
+  }
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
